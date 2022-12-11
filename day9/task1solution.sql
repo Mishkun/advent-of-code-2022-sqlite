@@ -54,15 +54,3 @@ uniq as(
      select distinct ti,tj from solution
 )
 select count(*) as answer from uniq
--- select printf('%s%s%s%s  %s%s%s%s  %s%s%s%s', iif(hi > ti and hj < tj, 'H', '.'),
---                                         iif(hi > ti and hj = tj, 'H', '.'),
---                                         iif(hi > ti and hj > tj, 'H', '.'),
---                                         char(10),
---                                         iif(hi = ti and hj < tj, 'H', '.'),
---                                         iif(hi = ti and hj = tj, 'Ж', 'T'),
---                                         iif(hi = ti and hj > tj, 'H', '.'),
---                                         char(10),
---                                         iif(hi < ti and hj < tj, 'H', '.'),
---                                         iif(hi < ti and hj = tj, 'H', '.'),
---                                         iif(hi < ti and hj > tj, 'H', '.'),
---                                         char(10)) as vis, hi -ti, hj -tj, dir from solution
